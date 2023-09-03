@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
+.transform-origin-1 {
+  transform-origin: 23.5px;
+  transition: all 0.2s linear;
+}
+.transition-menu {
+  transition: all 0.3s ease-in-out;
+}
+.bg-filter {
+  backdrop-filter: blur(10px);
+}
+.animation1 {
+  animation: myAnim 1.1s ease-in-out infinite;
+}
+@keyframes myAnim {
+  0% {
+    transform: translate(-2.9vw);
+  }
+
+  50% {
+    transform: translate(-0.5vw);
+  }
+
+  100% {
+    transform: translate(-2.9vw);
+  }
+}
+.animation2 {
+  animation: myAnim2 1.1s ease-in-out infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes myAnim2 {
+  0% {
+    transform: translate(-2.9vw);
+  }
+  50% {
+    transform: translate(0.3vw);
+  }
+  100% {
+    transform: translate(-2.9vw);
+  }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.animation3 {
+  animation: myAnim3 1.1s ease-in-out infinite;
+}
+@keyframes myAnim3 {
+  0% {
+    transform: translate(-3.1vw);
+  }
+  50% {
+    transform: translate(1vw);
+  }
+  100% {
+    transform: translate(-3.1vw);
+  }
+}
+.animation4 {
+  animation: myAnim4 0.2s ease-in-out;
+  box-shadow: 0 0 0.5vw #ff0074a6;
+}
+@keyframes myAnim4 {
+  0% {
+    transform: scaleX(0.2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.menu-anim {
+  animation: menuAnim 0.8s ease-in-out;
+  box-shadow: 0 0 1vw #000c;
+}
+@keyframes menuAnim {
+  0% {
+    transform: translateX(-30vw);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+.drop-animation {
+  animation: dropAnim 0.1s ease-in-out;
+}
+@keyframes dropAnim {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.items-animation {
+  animation: menuItemsAnim 0.15s ease-in-out;
+}
+@keyframes menuItemsAnim {
+  0% {
+    transform: translateX(-23vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* .preloader-animation {
+  animation: preloaderAnim 0.3s linear forwards;
+}
+@keyframes preloaderAnim {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
+.preloader {
+  box-shadow: 0 0 1vw #0009;
+}
+.circle-animation1 {
+  left: 0.5vw;
+  animation: circleAnim1 0.6s infinite;
+}
+@keyframes circleAnim1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.circle-animation2 {
+  left: 0.5vw;
+  animation: circleAnim2 0.6s infinite;
+}
+@keyframes circleAnim2 {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(1vw);
+  }
+}
+.circle-animation3 {
+  left: 2vw;
+  animation: circleAnim3 0.6s infinite;
+}
+@keyframes circleAnim3 {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(1.5vw);
+  }
+}
+.circle-animation4 {
+  left: 3.5vw;
+  animation: circleAnim4 0.6s infinite;
+}
+@keyframes circleAnim4 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.svg-pre {
+  position: absolute;
+  width: 100%;
+  transition: all 0.3s;
+  stroke-dasharray: 1750vw;
+  stroke-dashoffset: 1750vw;
+}
+.animation-svg-preloader {
+  fill: transparent;
+  stroke: var(--magenta);
+  stroke-width: 2.5vw;
+  animation: svgPreloaderAnim 2s linear forwards;
+}
+@keyframes svgPreloaderAnim {
+  0% {
+    stroke-dashoffset: 1750vw;
+  }
+  20% {
+    stroke-dashoffset: 1550vw;
+  }
+  40% {
+    stroke-dashoffset: 1250vw;
+  }
+  60% {
+    stroke-dashoffset: 1000vw;
+  }
+  70% {
+    stroke-dashoffset: 300vw;
+    fill: transparent;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: var(--magenta);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--magenta);
+  }
+}
+.bg-footer-img {
+  background-image: url("./Assets/vector-bg.webp");
+  background-size: 100%;
+  background-position: center;
+  background-color: var(--dark-bg);
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+.svg-footer {
+  position: absolute;
+
+  transition: all 0.3s;
+  stroke-dasharray: 1750vw;
+  stroke-dashoffset: 1750vw;
+}
+.animation-svg-footer {
+  fill: transparent;
+  stroke: var(--gold);
+  stroke-width: 2.5vw;
+  animation: svgFooterAnim 2s linear infinite;
+}
+@keyframes svgFooterAnim {
+  0% {
+    stroke-dashoffset: 1750vw;
+  }
+  20% {
+    stroke-dashoffset: 1550vw;
+  }
+  40% {
+    stroke-dashoffset: 1250vw;
+  }
+  60% {
+    stroke-dashoffset: 1000vw;
+  }
+  70% {
+    stroke-dashoffset: 300vw;
+    fill: transparent;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: var(--gold);
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--gold);
+  }
+}
+.icon-tr {
+  transition: all 0.3s;
+}
+.btn {
+  position: relative;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  transition-delay: 0.2s;
+}
+
+.btn:hover:before {
+  transition-delay: 0s;
+}
+
+.btn:hover:after {
+  background: var(--magenta) !important;
+  opacity: 100%;
+  border-radius: 5px;
+  transition-delay: 0.15s;
+}
+
+.from-left:before,
+.from-left:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.from-left:before {
+  right: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.from-left:after {
+  left: 0;
+}
+
+.from-left:hover:before,
+.from-left:hover:after {
+  width: 100%;
 }
